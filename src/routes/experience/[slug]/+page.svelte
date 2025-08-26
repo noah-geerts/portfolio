@@ -57,8 +57,7 @@
 					<div class="row-center flex-wrap m-b-2">
 						{#each data.experience.skills as item}
 							<Chip
-								classes="inline-flex flex-row items-center justify-center"
-								href={`${base}/skills/${item.slug}`}
+								classes="inline-flex flex-row items-center justify-center cursor-default"
 							>
 								<CardLogo
 									src={getAssetURL(item.logo)}
@@ -67,7 +66,7 @@
 									size={15}
 									classes="mr-2"
 								/>
-								<span class="text-[0.9em]">{item.name}</span>
+								<span class="text-[0.8em]">{item.name}</span>
 							</Chip>
 						{/each}
 					</div>

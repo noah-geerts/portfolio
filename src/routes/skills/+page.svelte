@@ -2,10 +2,14 @@
 	import { base } from '$app/paths';
 	import { title, groupByCategory } from '@data/skills';
 	import { getAssetURL } from '$lib/data/assets';
+	import * as projects from '@data/projects';
+	import * as experiences from '@data/experience';
 
 	import SearchPage from '$lib/components/SearchPage.svelte';
 	import Card from '$lib/components/Card/Card.svelte';
 	import UIcon from '$lib/components/Icon/UIcon.svelte';
+	import CardLogo from '$lib/components/Card/CardLogo.svelte';
+	import Chip from '$lib/components/Chip/Chip.svelte';
 
 	let result = groupByCategory('');
 
@@ -13,6 +17,38 @@
 		const query = e.detail.search;
 
 		result = groupByCategory(query.trim().toLowerCase());
+	};
+
+	const getRelatedItems = (skillSlug: string) => {
+		const related: Array<{ display: string; name: string; img: string; type: 'projects' | 'experience'; url: string }> = [];
+
+		// Get related projects
+		projects.items.forEach((item) => {
+			if (item.skills.some((tech) => tech.slug === skillSlug)) {
+				related.push({
+					img: getAssetURL(item.logo),
+					display: `${item.name}`,
+					name: item.name,
+					type: 'projects',
+					url: `/projects/${item.slug}`
+				});
+			}
+		});
+
+		// Get related experience
+		experiences.items.forEach((item) => {
+			if (item.skills.some((tech) => tech.slug === skillSlug)) {
+				related.push({
+					img: getAssetURL(item.logo),
+					display: `${item.name} @ ${item.company}`,
+					name: item.name,
+					type: 'experience',
+					url: `/experience/${item.slug}`
+				});
+			}
+		});
+
+		return related;
 	};
 </script>
 
@@ -33,15 +69,30 @@
 					</div>
 					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-3 lg:gap-5 ">
 						{#each group.items as skill (skill.slug)}
-							<Card
-								classes={['cursor-pointer decoration-none']}
-								tiltDegree={1}
-								href={`${base}/skills/${skill.slug}`}
-								bgImg={getAssetURL(skill.logo)}
-								color={skill.color}
-							>
-								<p class="text-[var(--tertiary-text)]">{skill.name}</p>
-							</Card>
+							{@const relatedItems = getRelatedItems(skill.slug)}
+							<div class="col gap-3">
+								<Card
+									classes={['decoration-none']}
+									tiltDegree={1}
+									bgImg={getAssetURL(skill.logo)}
+									color={skill.color}
+								>
+									<p class="text-[var(--tertiary-text)]">{skill.name}</p>
+								</Card>
+								{#if relatedItems.length > 0}
+									<div class="col gap-2">
+										{#each relatedItems as item}
+											<Chip
+												classes="inline-flex flex-row items-center justify-center cursor-pointer overflow-hidden"
+												href={`${base}${item.url}`}
+											>
+												<CardLogo src={item.img} alt={item.name} radius={'0px'} size={15} classes="mr-2 flex-shrink-0" />
+												<span class="text-[0.8em] truncate min-w-0">{item.display}</span>
+											</Chip>
+										{/each}
+									</div>
+								{/if}
+							</div>
 						{/each}
 					</div>
 				</div>

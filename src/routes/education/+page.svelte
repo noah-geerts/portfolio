@@ -72,7 +72,7 @@
 									<CardDivider />
 									<div class="row items-center gap-2">
 										<UIcon icon="i-carbon-time" />
-										{computeExactDuration(education.period.from, education.period.to)}
+										{education.period.from ? new Date(education.period.from).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : ''} - {education.period.to ? new Date(education.period.to).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : ''}
 									</div>
 									<CardDivider />
 								</div>

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Experience } from '$lib/types';
-	import { computeExactDuration, getMonthName, getTimeDiff } from '$lib/utils/helpers';
+	import { getMonthName, getTimeDiff } from '$lib/utils/helpers';
 	import Card from '../Card/Card.svelte';
 	import CardLogo from '../Card/CardLogo.svelte';
 	import CardTitle from '../Card/CardTitle.svelte';
@@ -13,8 +13,7 @@
 
 	export let experience: Experience;
 
-	// const months = getTimeDiff(experience.period.from, experience.period.to);
-	const exactDuration = computeExactDuration(experience.period.from, experience.period.to);
+	const duration = getTimeDiff(experience.period.from, experience.period.to);
 
 	const from = `${getMonthName(
 		experience.period.from.getMonth()
@@ -64,7 +63,7 @@
 				<CardDivider />
 				<div class="row items-center gap-2">
 					<UIcon icon="i-carbon-time" classes="text-1.25em" />
-					{exactDuration}
+					{duration}
 				</div>
 				<CardDivider />
 			</div>
@@ -74,7 +73,6 @@
 					<ChipIcon
 						logo={getAssetURL(skill.logo)}
 						name={skill.name}
-						href={`${base}/skills/${skill.slug}`}
 					/>
 				{/each}
 			</div>

@@ -62,7 +62,6 @@
 						{#each data.project.skills as item}
 							<Chip
 								classes="inline-flex flex-row items-center justify-center"
-								href={`${base}/skills/${item.slug}`}
 							>
 								<CardLogo
 									src={getAssetURL(item.logo)}

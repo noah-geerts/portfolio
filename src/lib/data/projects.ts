@@ -4,19 +4,25 @@ import type { Project } from '../types';
 
 export const items: Array<Project> = [
 	{
-		slug: 'slick-portfolio-angular',
+		slug: 'cpp-nn-library',
 		color: '#5e95e3',
 		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore non dolores voluptatibus vitae praesentium aperiam, iure laboriosam repellendus sunt explicabo pariatur totam enim, nihil animi quisquam. Sit vero quod laborum!',
+			`Developed a neural network library from scratch to strengthen my understanding of core deep learning concepts, including matrix operations, forward pass, backpropagation, and gradient descent.
+
+Implementation: Built support for arbitrary network architectures, 10 activation functions, 5 loss functions, and 3 optimization algorithms, with a modular and easily extendable design.
+
+Testing: Wrote comprehensive unit tests using Google Test to ensure correctness and reproducibility.
+
+Outcome: Developed a simple, extendable C++ neural network library, intended for further enhancement and use in future projects and experiments as I deepen my machine learning expertise.Developed a neural network library from`,
 		shortDescription:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore non dolores voluptatibus vitae praesentium aperiam, iure laboriosam repellendus sunt explicabo pariatur totam enim, nihil animi quisquam. Sit vero quod laborum!',
+			'Built a simple neural network from scratch in C++ to strengthen my understanding of forward pass, backpropagation, and gradient descent.',
 		links: [{ to: 'https://github.com/RiadhAdrani/slick-portfolio-svelte', label: 'GitHub' }],
 		logo: Assets.Unknown,
-		name: 'Slick Portfolio',
+		name: 'C++ Neural Network Library',
 		period: {
 			from: new Date()
 		},
-		skills: getSkills('angular', 'ts', 'tailwind'),
+		skills: getSkills('cpp', 'machine-learning'),
 		type: 'Website Template'
 	},
 	{
@@ -32,7 +38,7 @@ export const items: Array<Project> = [
 		period: {
 			from: new Date()
 		},
-		skills: getSkills('svelte', 'ts', 'tailwind', 'sass'),
+		skills: getSkills('svelte', 'ts', 'css', 'html'),
 		type: 'Website Template',
 		screenshots: [
 			{
