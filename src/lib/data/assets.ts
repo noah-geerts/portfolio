@@ -80,7 +80,9 @@ const Assets = {
 	MSSQL: a('mssql.png'),
 	NN: a('nn.jpg'),
 	Sysdes: a('systemdesign.png'),
-	DSA: a('dsa.png')
+	DSA: a('dsa.png'),
+	ASPDOTNETCORE: a('aspdotnetcore.webp'),
+	Sprintboot: a('springboot.png')
 };
 
 export default Assets;

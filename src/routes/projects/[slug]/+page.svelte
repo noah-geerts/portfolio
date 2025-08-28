@@ -97,7 +97,7 @@
 						{#each screenshots as item, index}
 							<!-- svelte-ignore a11y-no-static-element-interactions -->
 							<div
-								class="col-center gap-3 overflow-hidden w-100% h-100% rounded-10px"
+								class="col-center gap-3 overflow-hidden w-100% rounded-10px"
 								on:click={() => (screenIndex = index)}
 								on:keydown
 								on:keypress
@@ -105,7 +105,7 @@
 								on:keyup
 							>
 								<div
-									class="screenshot aspect-video bg-contain w-100% cursor-pointer"
+									class="screenshot bg-contain w-100% cursor-pointer"
 									style={`background-image: url(${item.src});`}
 								/>
 								<p class="text-[var(--tertiary-text)] font-300">{item.label}</p>
@@ -128,11 +128,13 @@
 	.screenshot {
 		background-repeat: no-repeat;
 		background-position: center;
-		background-size: 100%;
+		background-size: contain;
 		transition: background-size 200ms;
+		min-height: 400px;
+		height: auto;
 
 		&:hover {
-			background-size: 120%;
+			background-size: 110%;
 		}
 	}
 </style>

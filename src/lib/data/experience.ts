@@ -11,7 +11,7 @@ export const items: Array<Experience> = [
 		type: 'Technology & Business',
 		location: 'Kelowna, British Columbia, Canada',
 		period: { from: new Date(2024, 5, 1), to: new Date() },
-		skills: getSkills('react-native', 'expo', 'firebase', 'aws', 'python', 'ts', 'js', 'express'),
+		skills: getSkills('react-native', 'express', 'firebase', 'python', 'expo', 'ts', 'js', 'aws', 'system-design'),
 		name: 'Chief Technology Officer',
 		color: 'blue',
 		links: [{to: 'https://www.linkedin.com/company/tm-network-easyeats/posts/?feedView=all',
