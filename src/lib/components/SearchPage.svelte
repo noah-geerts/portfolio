@@ -32,10 +32,9 @@
 
 			window.history.replaceState(state, '', url);
 			
-			if ($page.url.pathname.startsWith(`${base}/search`)) {
-				if (searchInput) {
-					searchInput.focus();
-				}
+			// Auto-focus search input when component mounts
+			if (searchInput) {
+				searchInput.focus();
 			}
 		}
 	}
