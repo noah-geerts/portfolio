@@ -45,7 +45,7 @@
 		<CardDivider />
 		<div class="row items-center gap-2">
 			<UIcon icon="i-carbon-time" classes="text-1.25em" />
-			<p>{period}</p>
+			<p>{from} - {to}</p>
 		</div>
 		<CardDivider />
 	</div>
@@ -54,19 +54,10 @@
 			{project.shortDescription}
 		</p>
 	</div>
-	<div class="row justify-between text-0.8em font-400">
-		<Chip>{from}</Chip>
-		{#if from !== to}
-			<Chip>{to}</Chip>
-		{/if}
-	</div>
 	<CardDivider />
 	<div class="row flex-wrap">
 		{#each project.skills as tech}
-			<ChipIcon
-				logo={getAssetURL(tech.logo)}
-				name={tech.name}
-			/>
+			<ChipIcon logo={getAssetURL(tech.logo)} name={tech.name} />
 		{/each}
 	</div>
 </Card>

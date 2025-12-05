@@ -7,8 +7,7 @@ export const name = 'Noah';
 
 export const lastName = 'Geerts';
 
-export const description =
-	'CTO of TM Network Inc and Full Stack Developer';
+export const description = 'Full Stack Developer';
 
 export const links: Array<{ platform: Platform; link: string }> = [
 	{ platform: Platform.GitHub, link: 'https://github.com/noah-geerts' },
@@ -19,7 +18,7 @@ export const links: Array<{ platform: Platform; link: string }> = [
 	{
 		platform: Platform.Email,
 		link: 'noahgeerts@outlook.com'
-	},
+	}
 ];
 
-export const skills = getSkills('js', 'css', 'html', 'reactjs', 'sass', 'svelte', 'ts');
+export const skills = getSkills('springboot', 'aws', 'reactjs', 'html');

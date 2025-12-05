@@ -48,12 +48,6 @@
 			class="row h-full justify-center items-stretch m-l-auto md:m-l-0 w-auto md:w-150px gap-1 text-1.15em"
 		>
 			<div class="row hidden md:flex">
-				<a
-					href={`${base}/search`}
-					class="text-inherit col-center self-stretch px-2 hover:bg-[color:var(--main-hover)]"
-				>
-					<UIcon icon="i-carbon-search" />
-				</a>
 				<button
 					class="bg-transparent text-1em border-none cursor-pointer hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)] px-2"
 					on:click={() => toggleTheme()}

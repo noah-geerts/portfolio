@@ -57,7 +57,7 @@ const Assets = {
 	Unknown: a('no-img.svg'),
 	MongoDB: a('mongodb.svg'),
 	Redis: a('redis.svg'),
-	Tailwind: a('tailwind.svg'),
+	Tailwind: a('tailwind.png'),
 	HTML: a('html.svg'),
 	Premiere: a('premiere.svg'),
 	Photoshop: a('photoshop.svg'),
@@ -71,6 +71,8 @@ const Assets = {
 	Unocss: a('unocss.svg'),
 	Ruvy: a('ruvy.svg'),
 	Postcss: a('postcss.svg'),
+	OAuth2: a('oauth2.png'),
+	WebSockets: a('websocket.png'),
 	UBC: a('ubc.png'),
 	UCL: a('ucl.png'),
 	KT: a('kt.jpeg'),
@@ -82,7 +84,10 @@ const Assets = {
 	Sysdes: a('systemdesign.png'),
 	DSA: a('dsa.png'),
 	ASPDOTNETCORE: a('aspdotnetcore.webp'),
-	Sprintboot: a('springboot.png')
+	Sprintboot: a('springboot.png'),
+	taskboard: a('taskboard.png'),
+	Progress: a('progress.png'),
+	Yap: a('yap.svg')
 };
 
 export default Assets;

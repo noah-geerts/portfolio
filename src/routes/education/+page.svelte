@@ -52,7 +52,7 @@
 						<UIcon icon="i-carbon-condition-point" />
 					</div>
 					<div class="col flex-1 items-stretch">
-						<Card>
+						<Card tiltDegree={0} classes={['no-hover-effects']}>
 							<div class="flex-1 col gap-2 items-stretch">
 								<img
 									src={getAssetURL(education.logo)}
@@ -72,7 +72,19 @@
 									<CardDivider />
 									<div class="row items-center gap-2">
 										<UIcon icon="i-carbon-time" />
-										{education.period.from ? new Date(education.period.from).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : ''} - {education.period.to ? new Date(education.period.to).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : ''}
+										{education.period.from
+											? new Date(education.period.from).toLocaleDateString('en-US', {
+													year: 'numeric',
+													month: 'long',
+													day: 'numeric'
+												})
+											: ''} - {education.period.to
+											? new Date(education.period.to).toLocaleDateString('en-US', {
+													year: 'numeric',
+													month: 'long',
+													day: 'numeric'
+												})
+											: ''}
 									</div>
 									<CardDivider />
 								</div>
@@ -89,3 +101,14 @@
 		{/if}
 	</div>
 </SearchPage>
+
+<style>
+	:global(.no-hover-effects:hover) {
+		transform: none !important;
+		border-color: var(--border) !important;
+	}
+	:global(.no-hover-effects .card-bg-img:hover) {
+		background-color: transparent !important;
+		background-image: none !important;
+	}
+</style>

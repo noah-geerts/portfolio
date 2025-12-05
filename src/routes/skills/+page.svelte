@@ -20,7 +20,13 @@
 	};
 
 	const getRelatedItems = (skillSlug: string) => {
-		const related: Array<{ display: string; name: string; img: string; type: 'projects' | 'experience'; url: string }> = [];
+		const related: Array<{
+			display: string;
+			name: string;
+			img: string;
+			type: 'projects' | 'experience';
+			url: string;
+		}> = [];
 
 		// Get related projects
 		projects.items.forEach((item) => {
@@ -67,10 +73,27 @@
 						<p class="text-[var(--main-close)]">{group.category.name}</p>
 						<div class="flex-1 bg-[var(--main-hover)] h-[1px]" />
 					</div>
-					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-3 lg:gap-5 ">
+					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-3 lg:gap-5">
 						{#each group.items as skill (skill.slug)}
 							{@const relatedItems = getRelatedItems(skill.slug)}
-							<div class="col gap-3">
+							{@const projects = relatedItems.filter((item) => item.type === 'projects')}
+							{@const experiences = relatedItems.filter((item) => item.type === 'experience')}
+							<div
+								class="col gap-3 relative"
+								on:mouseenter={() => {
+									if (relatedItems.length > 0) {
+										clearTimeout(window[`hideTimeout-${skill.slug}`]);
+										const tooltip = document.getElementById(`tooltip-${skill.slug}`);
+										if (tooltip) tooltip.style.display = 'block';
+									}
+								}}
+								on:mouseleave={() => {
+									window[`hideTimeout-${skill.slug}`] = setTimeout(() => {
+										const tooltip = document.getElementById(`tooltip-${skill.slug}`);
+										if (tooltip) tooltip.style.display = 'none';
+									}, 100);
+								}}
+							>
 								<Card
 									classes={['decoration-none']}
 									tiltDegree={1}
@@ -80,16 +103,68 @@
 									<p class="text-[var(--tertiary-text)]">{skill.name}</p>
 								</Card>
 								{#if relatedItems.length > 0}
-									<div class="col gap-2">
-										{#each relatedItems as item}
-											<Chip
-												classes="inline-flex flex-row items-center justify-center cursor-pointer overflow-hidden"
-												href={`${base}${item.url}`}
-											>
-												<CardLogo src={item.img} alt={item.name} radius={'0px'} size={15} classes="mr-2 flex-shrink-0" />
-												<span class="text-[0.8em] truncate min-w-0">{item.display}</span>
-											</Chip>
-										{/each}
+									<div
+										id="tooltip-{skill.slug}"
+										class="absolute top-full left-0 right-0 mt-1 p-4 bg-[var(--main)] border border-[var(--border)] rounded-lg shadow-lg z-10"
+										style="display: none;"
+										on:mouseenter={() => {
+											clearTimeout(window[`hideTimeout-${skill.slug}`]);
+										}}
+										on:mouseleave={() => {
+											const tooltip = document.getElementById(`tooltip-${skill.slug}`);
+											if (tooltip) tooltip.style.display = 'none';
+										}}
+									>
+										{#if projects.length > 0}
+											<div class="mb-3">
+												<p class="text-[var(--accent-text)] font-semibold text-sm mb-2">Projects</p>
+												<div class="col gap-1">
+													{#each projects as item}
+														<a
+															href={`${base}${item.url}`}
+															class="flex items-center gap-2 p-2 rounded hover:bg-[var(--main-hover)] transition-colors"
+														>
+															<CardLogo
+																src={item.img}
+																alt={item.name}
+																radius={'0px'}
+																size={16}
+																classes="flex-shrink-0"
+															/>
+															<span class="text-[0.75em] text-[var(--tertiary-text)] truncate"
+																>{item.display}</span
+															>
+														</a>
+													{/each}
+												</div>
+											</div>
+										{/if}
+										{#if experiences.length > 0}
+											<div>
+												<p class="text-[var(--accent-text)] font-semibold text-sm mb-2">
+													Work Experience
+												</p>
+												<div class="col gap-1">
+													{#each experiences as item}
+														<a
+															href={`${base}${item.url}`}
+															class="flex items-center gap-2 p-2 rounded hover:bg-[var(--main-hover)] transition-colors"
+														>
+															<CardLogo
+																src={item.img}
+																alt={item.name}
+																radius={'0px'}
+																size={16}
+																classes="flex-shrink-0"
+															/>
+															<span class="text-[0.75em] text-[var(--tertiary-text)] truncate"
+																>{item.display}</span
+															>
+														</a>
+													{/each}
+												</div>
+											</div>
+										{/if}
 									</div>
 								{/if}
 							</div>
