@@ -1,0 +1,300 @@
+{
+  "version": 3,
+  "routes": [
+    {
+      "src": "/slick-portfolio-svelte/",
+      "dest": "/slick-portfolio-svelte"
+    },
+    {
+      "src": "/slick-portfolio-svelte",
+      "status": 308,
+      "headers": {
+        "Location": "/slick-portfolio-svelte/"
+      }
+    },
+    {
+      "src": "/slick-portfolio-svelte/education",
+      "dest": "/slick-portfolio-svelte/education/"
+    },
+    {
+      "src": "/slick-portfolio-svelte/education/",
+      "status": 308,
+      "headers": {
+        "Location": "/slick-portfolio-svelte/education"
+      }
+    },
+    {
+      "src": "/slick-portfolio-svelte/experience",
+      "dest": "/slick-portfolio-svelte/experience/"
+    },
+    {
+      "src": "/slick-portfolio-svelte/experience/",
+      "status": 308,
+      "headers": {
+        "Location": "/slick-portfolio-svelte/experience"
+      }
+    },
+    {
+      "src": "/slick-portfolio-svelte/projects",
+      "dest": "/slick-portfolio-svelte/projects/"
+    },
+    {
+      "src": "/slick-portfolio-svelte/projects/",
+      "status": 308,
+      "headers": {
+        "Location": "/slick-portfolio-svelte/projects"
+      }
+    },
+    {
+      "src": "/slick-portfolio-svelte/resume",
+      "dest": "/slick-portfolio-svelte/resume/"
+    },
+    {
+      "src": "/slick-portfolio-svelte/resume/",
+      "status": 308,
+      "headers": {
+        "Location": "/slick-portfolio-svelte/resume"
+      }
+    },
+    {
+      "src": "/slick-portfolio-svelte/skills",
+      "dest": "/slick-portfolio-svelte/skills/"
+    },
+    {
+      "src": "/slick-portfolio-svelte/skills/",
+      "status": 308,
+      "headers": {
+        "Location": "/slick-portfolio-svelte/skills"
+      }
+    },
+    {
+      "src": "/slick-portfolio-svelte/experience/tm-network-cto",
+      "dest": "/slick-portfolio-svelte/experience/tm-network-cto/"
+    },
+    {
+      "src": "/slick-portfolio-svelte/experience/tm-network-cto/",
+      "status": 308,
+      "headers": {
+        "Location": "/slick-portfolio-svelte/experience/tm-network-cto"
+      }
+    },
+    {
+      "src": "/slick-portfolio-svelte/experience/king-taps-porter",
+      "dest": "/slick-portfolio-svelte/experience/king-taps-porter/"
+    },
+    {
+      "src": "/slick-portfolio-svelte/experience/king-taps-porter/",
+      "status": 308,
+      "headers": {
+        "Location": "/slick-portfolio-svelte/experience/king-taps-porter"
+      }
+    },
+    {
+      "src": "/slick-portfolio-svelte/experience/king-taps-expeditor",
+      "dest": "/slick-portfolio-svelte/experience/king-taps-expeditor/"
+    },
+    {
+      "src": "/slick-portfolio-svelte/experience/king-taps-expeditor/",
+      "status": 308,
+      "headers": {
+        "Location": "/slick-portfolio-svelte/experience/king-taps-expeditor"
+      }
+    },
+    {
+      "src": "/slick-portfolio-svelte/experience/michael-kidston-survey",
+      "dest": "/slick-portfolio-svelte/experience/michael-kidston-survey/"
+    },
+    {
+      "src": "/slick-portfolio-svelte/experience/michael-kidston-survey/",
+      "status": 308,
+      "headers": {
+        "Location": "/slick-portfolio-svelte/experience/michael-kidston-survey"
+      }
+    },
+    {
+      "src": "/slick-portfolio-svelte/projects/yap",
+      "dest": "/slick-portfolio-svelte/projects/yap/"
+    },
+    {
+      "src": "/slick-portfolio-svelte/projects/yap/",
+      "status": 308,
+      "headers": {
+        "Location": "/slick-portfolio-svelte/projects/yap"
+      }
+    },
+    {
+      "src": "/slick-portfolio-svelte/projects/progress",
+      "dest": "/slick-portfolio-svelte/projects/progress/"
+    },
+    {
+      "src": "/slick-portfolio-svelte/projects/progress/",
+      "status": 308,
+      "headers": {
+        "Location": "/slick-portfolio-svelte/projects/progress"
+      }
+    },
+    {
+      "src": "/slick-portfolio-svelte/projects/taskboard",
+      "dest": "/slick-portfolio-svelte/projects/taskboard/"
+    },
+    {
+      "src": "/slick-portfolio-svelte/projects/taskboard/",
+      "status": 308,
+      "headers": {
+        "Location": "/slick-portfolio-svelte/projects/taskboard"
+      }
+    },
+    {
+      "src": "/slick-portfolio-svelte/projects/cpp-nn-library",
+      "dest": "/slick-portfolio-svelte/projects/cpp-nn-library/"
+    },
+    {
+      "src": "/slick-portfolio-svelte/projects/cpp-nn-library/",
+      "status": 308,
+      "headers": {
+        "Location": "/slick-portfolio-svelte/projects/cpp-nn-library"
+      }
+    },
+    {
+      "src": "/slick-portfolio-svelte/projects/easyeats-mobile-app",
+      "dest": "/slick-portfolio-svelte/projects/easyeats-mobile-app/"
+    },
+    {
+      "src": "/slick-portfolio-svelte/projects/easyeats-mobile-app/",
+      "status": 308,
+      "headers": {
+        "Location": "/slick-portfolio-svelte/projects/easyeats-mobile-app"
+      }
+    },
+    {
+      "src": "/slick-portfolio-svelte/projects/charity-donation-platform",
+      "dest": "/slick-portfolio-svelte/projects/charity-donation-platform/"
+    },
+    {
+      "src": "/slick-portfolio-svelte/projects/charity-donation-platform/",
+      "status": 308,
+      "headers": {
+        "Location": "/slick-portfolio-svelte/projects/charity-donation-platform"
+      }
+    },
+    {
+      "src": "/slick-portfolio-svelte/projects/honours-thesis",
+      "dest": "/slick-portfolio-svelte/projects/honours-thesis/"
+    },
+    {
+      "src": "/slick-portfolio-svelte/projects/honours-thesis/",
+      "status": 308,
+      "headers": {
+        "Location": "/slick-portfolio-svelte/projects/honours-thesis"
+      }
+    },
+    {
+      "src": "/slick-portfolio-svelte/projects/custom-shell-program",
+      "dest": "/slick-portfolio-svelte/projects/custom-shell-program/"
+    },
+    {
+      "src": "/slick-portfolio-svelte/projects/custom-shell-program/",
+      "status": 308,
+      "headers": {
+        "Location": "/slick-portfolio-svelte/projects/custom-shell-program"
+      }
+    },
+    {
+      "src": "/slick-portfolio-svelte/projects/neural-denoiser-framerate-enhancer",
+      "dest": "/slick-portfolio-svelte/projects/neural-denoiser-framerate-enhancer/"
+    },
+    {
+      "src": "/slick-portfolio-svelte/projects/neural-denoiser-framerate-enhancer/",
+      "status": 308,
+      "headers": {
+        "Location": "/slick-portfolio-svelte/projects/neural-denoiser-framerate-enhancer"
+      }
+    },
+    {
+      "src": "/slick-portfolio-svelte/projects/game-of-amazons-ai",
+      "dest": "/slick-portfolio-svelte/projects/game-of-amazons-ai/"
+    },
+    {
+      "src": "/slick-portfolio-svelte/projects/game-of-amazons-ai/",
+      "status": 308,
+      "headers": {
+        "Location": "/slick-portfolio-svelte/projects/game-of-amazons-ai"
+      }
+    },
+    {
+      "src": "/slick-portfolio-svelte/_app/immutable/.+",
+      "headers": {
+        "cache-control": "public, immutable, max-age=31536000"
+      }
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/.*",
+      "dest": "/render"
+    }
+  ],
+  "overrides": {
+    "index.html": {
+      "path": "slick-portfolio-svelte"
+    },
+    "education.html": {
+      "path": "slick-portfolio-svelte/education"
+    },
+    "experience.html": {
+      "path": "slick-portfolio-svelte/experience"
+    },
+    "projects.html": {
+      "path": "slick-portfolio-svelte/projects"
+    },
+    "resume.html": {
+      "path": "slick-portfolio-svelte/resume"
+    },
+    "skills.html": {
+      "path": "slick-portfolio-svelte/skills"
+    },
+    "experience/tm-network-cto.html": {
+      "path": "slick-portfolio-svelte/experience/tm-network-cto"
+    },
+    "experience/king-taps-porter.html": {
+      "path": "slick-portfolio-svelte/experience/king-taps-porter"
+    },
+    "experience/king-taps-expeditor.html": {
+      "path": "slick-portfolio-svelte/experience/king-taps-expeditor"
+    },
+    "experience/michael-kidston-survey.html": {
+      "path": "slick-portfolio-svelte/experience/michael-kidston-survey"
+    },
+    "projects/yap.html": {
+      "path": "slick-portfolio-svelte/projects/yap"
+    },
+    "projects/progress.html": {
+      "path": "slick-portfolio-svelte/projects/progress"
+    },
+    "projects/taskboard.html": {
+      "path": "slick-portfolio-svelte/projects/taskboard"
+    },
+    "projects/cpp-nn-library.html": {
+      "path": "slick-portfolio-svelte/projects/cpp-nn-library"
+    },
+    "projects/easyeats-mobile-app.html": {
+      "path": "slick-portfolio-svelte/projects/easyeats-mobile-app"
+    },
+    "projects/charity-donation-platform.html": {
+      "path": "slick-portfolio-svelte/projects/charity-donation-platform"
+    },
+    "projects/honours-thesis.html": {
+      "path": "slick-portfolio-svelte/projects/honours-thesis"
+    },
+    "projects/custom-shell-program.html": {
+      "path": "slick-portfolio-svelte/projects/custom-shell-program"
+    },
+    "projects/neural-denoiser-framerate-enhancer.html": {
+      "path": "slick-portfolio-svelte/projects/neural-denoiser-framerate-enhancer"
+    },
+    "projects/game-of-amazons-ai.html": {
+      "path": "slick-portfolio-svelte/projects/game-of-amazons-ai"
+    }
+  }
+}
